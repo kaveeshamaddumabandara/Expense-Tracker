@@ -278,6 +278,51 @@ class ProfileTab extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(vertical: 14),
                     ),
                   ),
+                  const SizedBox(height: 28),
+                  // About Extrack App Brand Card
+                  Center(
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18),
+                            border: Border.all(color: AppColors.borderLight),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withValues(alpha: 0.04),
+                                blurRadius: 10,
+                                offset: const Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: Image.asset(
+                            'assets/images/extrack_logo.png',
+                            height: 40,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        const Text(
+                          'Extrack • Smart Expense Tracker',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: AppColors.textDark,
+                          ),
+                        ),
+                        const SizedBox(height: 3),
+                        const Text(
+                          'Version 1.0.0 (Offline Edition) • LKR Currency',
+                          style: TextStyle(
+                            fontSize: 11.5,
+                            color: AppColors.textSecondary,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   const SizedBox(height: 80),
                 ],
               ),

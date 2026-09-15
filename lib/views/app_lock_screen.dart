@@ -85,46 +85,43 @@ class _AppLockScreenState extends State<AppLockScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Top Security Shield Icon with Glowing Ring
+                      // Top Extrack Brand Logo Hero
                       Container(
-                        width: 78,
-                        height: 78,
+                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
                         decoration: BoxDecoration(
-                          shape: BoxShape.circle,
                           color: Colors.white,
+                          borderRadius: BorderRadius.circular(26),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black.withValues(alpha: 0.18),
-                              blurRadius: 20,
+                              blurRadius: 22,
                               offset: const Offset(0, 8),
                             ),
                           ],
                         ),
-                        child: const Center(
-                          child: Icon(
-                            Icons.lock_outline_rounded,
-                            size: 40,
-                            color: AppColors.primaryBlue,
-                          ),
+                        child: Image.asset(
+                          'assets/images/extrack_logo.png',
+                          height: 60,
+                          fit: BoxFit.contain,
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 14),
                       const Text(
                         'Smart Finance',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 26,
+                          fontSize: 22,
                           fontWeight: FontWeight.w800,
-                          letterSpacing: -0.5,
+                          letterSpacing: -0.4,
                         ),
                       ),
-                      const SizedBox(height: 6),
+                      const SizedBox(height: 4),
                       Text(
                         '100% Offline & Private Expense Tracker',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white.withValues(alpha: 0.85),
-                          fontSize: 13.5,
+                          fontSize: 13,
                         ),
                       ),
                       const SizedBox(height: 28),

@@ -44,17 +44,22 @@ class ExpenseTrackerHome extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                width: 64,
-                height: 64,
-                decoration: const BoxDecoration(
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+                decoration: BoxDecoration(
                   color: Colors.white,
-                  shape: BoxShape.circle,
+                  borderRadius: BorderRadius.circular(24),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.18),
+                      blurRadius: 24,
+                      offset: const Offset(0, 8),
+                    ),
+                  ],
                 ),
-                child: const Center(
-                  child: CircularProgressIndicator(
-                    strokeWidth: 3,
-                    color: AppColors.primaryBlue,
-                  ),
+                child: Image.asset(
+                  'assets/images/extrack_logo.png',
+                  height: 64,
+                  fit: BoxFit.contain,
                 ),
               ),
               const SizedBox(height: 18),
@@ -65,6 +70,15 @@ class ExpenseTrackerHome extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.w800,
                   letterSpacing: -0.3,
+                ),
+              ),
+              const SizedBox(height: 14),
+              const SizedBox(
+                width: 24,
+                height: 24,
+                child: CircularProgressIndicator(
+                  strokeWidth: 2.5,
+                  color: Colors.white,
                 ),
               ),
             ],
